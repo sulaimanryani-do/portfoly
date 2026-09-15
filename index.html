@@ -41,24 +41,45 @@
         </ul>
     </section>
 
-    <!-- 4. Filter Projects & 3. Projectes -->
+  <!-- 4. Projectes (Rttab w M-nazzam 3la 7sab Les Catégories) -->
     <section>
         <h2>Projectes</h2>
+        
+        <!-- Les Boutons dyal l-Filtrage -->
         <div class="filter-btns">
             <button onclick="filterProjects('all')">Tots</button>
+            <button onclick="filterProjects('java')">Apps (Java)</button>
             <button onclick="filterProjects('web')">Web</button>
-            <button onclick="filterProjects('js')">JS</button>
+            <button onclick="filterProjects('sql')">Bases de Dades (SQL / PLSQL)</button>
         </div>
 
         <div id="projects-container">
+            
+            <!-- Projet 1: Java (DUNGEONQUEST) -->
+            <div class="project-card java">
+                <h3>DUNGEONQUEST (Java)</h3>
+                <p><strong>Descripció:</strong> Joc de rol desenvolupat en Java utilitzant Programació Orientada a Objectes (POO), amb sales de trampes, teranyines, monstres i sistemes de combat.</p>
+                <p><strong>Tecnologies:</strong> Java (Eclipse), Git</p>
+                <a href="https://github.com/sulaimanryani-do/DUNGEONQUEST;">🔗 Veure codi a GitHub</a>
+            </div>
+
+            <!-- Projet 2: Web -->
             <div class="project-card web">
-                <h3>Projet 1: Site Web Personnel</h3>
-                <p>Description dyal l'projet w kifach khedmt 3lih.</p>
+                <h3>Site Web Personnel (Portfolio)</h3>
+                <p><strong>Descripció:</strong> Creació d'un portfolio digital personal per mostrar el currículum i projectes accessibles pel professorat.</p>
+                <p><strong>Tecnologies:</strong> HTML5, CSS3, JavaScript, GitHub Pages</p>
+                <a href="https://github.com/sulaimanryani-do/portfoly" target="_blank" style="color: #007bff; text-decoration: none; font-weight: bold;">🔗 Veure codi a GitHub</a>
             </div>
-            <div class="project-card js">
-                <h3>Projet 2: Jeu JavaScript</h3>
-                <p>Description dyal jeu b JavaScript.</p>
+
+            <!-- Projet 3: Base de Dades (SQL / PLSQL) -->
+            <div class="project-card sql">
+                <h3>Gestió de Base de Dades (SQL & PL/SQL)</h3>
+                <p><strong>Descripció:</strong> Projecte de bases de dades per gestionar taules, consultes complexes, funcions i procediments emmagatzemats.</p>
+                <p><strong>Tecnologies:</strong> Oracle, SQL, PL/SQL</p>
+                <!-- Ila kan andk repo dyal SQL tqder t-bdel had l-link, wla tkhallih hka -->
+                <a href="https://github.com/sulaimanryani-do" target="_blank" style="color: #007bff; text-decoration: none; font-weight: bold;">🔗 Veure codi a GitHub</a>
             </div>
+
         </div>
     </section>
 
