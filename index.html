@@ -1,1 +1,85 @@
 
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>El Meu Portfolio</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 0; padding: 0; background-color: #f4f4f9; color: #333; }
+        header { background: #333; color: #fff; padding: 2rem; text-align: center; }
+        section { padding: 2rem; max-width: 800px; margin: auto; background: #fff; margin-top: 1rem; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
+        h2 { color: #007bff; }
+        .filter-btns button { padding: 0.5rem 1rem; margin-right: 0.5rem; cursor: pointer; background: #007bff; color: white; border: none; border-radius: 4px; }
+        .project-card { border: 1px solid #ddd; padding: 1rem; margin-top: 1rem; border-radius: 5px; }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>[Smitk Hna]</h1>
+        <p>Desenvolupador / Estudiant</p>
+    </header>
+
+    <!-- 1. Dades Personals -->
+    <section>
+        <h2>Dades Personals</h2>
+        <p><strong>Nom:</strong> [Smitk W Knitek]</p>
+        <p><strong>Correu:</strong> [Email dyalk]</p>
+        <p><strong>Sobre mi:</strong> Estudiant w kanbghi n-développer des sites web w n3raf les technologies jdaded.</p>
+    </section>
+
+    <!-- 2. Habilitats -->
+    <section>
+        <h2>Habilitats (Habilitats)</h2>
+        <ul>
+            <li>HTML5 & CSS3</li>
+            <li>JavaScript</li>
+            <li>Git & GitHub</li>
+        </ul>
+    </section>
+
+    <!-- 4. Filter Projects & 3. Projectes -->
+    <section>
+        <h2>Projectes</h2>
+        <div class="filter-btns">
+            <button onclick="filterProjects('all')">Tots</button>
+            <button onclick="filterProjects('web')">Web</button>
+            <button onclick="filterProjects('js')">JS</button>
+        </div>
+
+        <div id="projects-container">
+            <div class="project-card web">
+                <h3>Projet 1: Site Web Personnel</h3>
+                <p>Description dyal l'projet w kifach khedmt 3lih.</p>
+            </div>
+            <div class="project-card js">
+                <h3>Projet 2: Jeu JavaScript</h3>
+                <p>Description dyal jeu b JavaScript.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. Formacions o Certificats -->
+    <section>
+        <h2>Formacions i Certificats</h2>
+        <ul>
+            <li>[Smit la formation wla l'diplôme] - [L'3am]</li>
+        </ul>
+    </section>
+
+    <script>
+        // Fonction dyal l'filtrage (Bach t-répondre l chrt dyal l'filtrage)
+        function filterProjects(category) {
+            const cards = document.querySelectorAll('.project-card');
+            cards.forEach(card => {
+                if (category === 'all' || card.classList.contains(category)) {
+                    card.style.display = 'block';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        }
+    </script>
+</body>
+</html>
