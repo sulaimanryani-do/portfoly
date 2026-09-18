@@ -28,22 +28,6 @@ botonsFiltre.forEach(boto => {
 
 filtrar('tots');
 
-const enllacos = document.querySelectorAll('.nav-link');
-const seccions = [...enllacos]
-  .map(enllac => document.querySelector(enllac.getAttribute('href')))
-  .filter(Boolean);
-
-const vigilant = new IntersectionObserver(entrades => {
-  entrades.forEach(entrada => {
-    if (!entrada.isIntersecting) return;
-    enllacos.forEach(enllac => {
-      enllac.classList.toggle('actiu', enllac.getAttribute('href') === '#' + entrada.target.id);
-    });
-  });
-}, { rootMargin: '-45% 0px -50% 0px' });
-
-seccions.forEach(seccio => vigilant.observe(seccio));
-
 const botoAmunt = document.getElementById('amunt');
 
 window.addEventListener('scroll', () => {
