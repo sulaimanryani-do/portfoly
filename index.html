@@ -1,18 +1,11 @@
-
 <!DOCTYPE html>
 <html lang="ca">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>El Meu Portfolio</title>
-    <style>
-        body { font-family: Arial, sans-serif; margin: 0; padding: 0; background-color: #f4f4f9; color: #333; }
-        header { background: #333; color: #fff; padding: 2rem; text-align: center; }
-        section { padding: 2rem; max-width: 800px; margin: auto; background: #fff; margin-top: 1rem; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
-        h2 { color: #007bff; }
-        .filter-btns button { padding: 0.5rem 1rem; margin-right: 0.5rem; cursor: pointer; background: #007bff; color: white; border: none; border-radius: 4px; }
-        .project-card { border: 1px solid #ddd; padding: 1rem; margin-top: 1rem; border-radius: 5px; }
-    </style>
+    <!-- Enllaç al fitxer CSS extern -->
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
@@ -31,7 +24,7 @@
 
     <!-- 2. Habilitats -->
     <section>
-        <h2>Habilitats (Habilitats)</h2>
+        <h2>Habilitats</h2>
         <ul>
             <li>Java</li> 
             <li>SQL & PL/SQL</li>    
@@ -42,68 +35,62 @@
         </ul>
     </section>
 
-  <!-- 4. Projectes (Rttab w M-nazzam 3la 7sab Les Catégories) -->
+    <!-- 4. Projectes -->
     <section>
         <h2>Projectes</h2>
         
-        <!-- Les Boutons dyal l-Filtrage -->
+        <!-- Botons de Filtratge -->
         <div class="filter-btns">
-            <button onclick="filterProjects('all')">Tots</button>
-            <button onclick="filterProjects('java')">Apps (Java)</button>
-            <button onclick="filterProjects('web')">Web</button>
-            <button onclick="filterProjects('sql')">Bases de Dades (SQL / PLSQL)</button>
+            <button onclick="filterProjects('all', this)" class="active">Tots</button>
+            <button onclick="filterProjects('java', this)">Apps (Java)</button>
+            <button onclick="filterProjects('web', this)">Web</button>
+            <button onclick="filterProjects('sql', this)">Bases de Dades (SQL / PLSQL)</button>
         </div>
 
         <div id="projects-container">
             
-           <div id="projects-container">
-            
-    <!-- Projet 1: Java (DUNGEONQUEST) -->
-    <div class="project-card java">
-        <h3>DUNGEONQUEST (Java)</h3>
-        <p><strong>Descripció:</strong> Joc de rol desenvolupat en Java utilitzant Programació Orientada a Objectes (POO), amb sales de trampes, teranyines, monstres i sistemes de combat.</p>
-        <p><strong>Tecnologies:</strong> Java (Eclipse), Git</p>
-        <a href="https://github.com/sulaimanryani-do/DUNGEONQUEST" target="_blank" style="color: #007bff; text-decoration: none; font-weight: bold;">🔗 Veure codi a GitHub</a>
-    </div>
+            <!-- Projet 1: Java (DUNGEONQUEST) -->
+            <div class="project-card java">
+                <h3>DUNGEONQUEST (Java)</h3>
+                <p><strong>Descripció:</strong> Joc de rol desenvolupat en Java utilitzant Programació Orientada a Objectes (POO), amb sales de trampes, teranyines, monstres i sistemes de combat.</p>
+                <p><strong>Tecnologies:</strong> Java (Eclipse), Git</p>
+                <a href="https://github.com/sulaimanryani-do/DUNGEONQUEST" target="_blank" style="color: #38bdf8; text-decoration: none; font-weight: bold;">🔗 Veure codi a GitHub</a>
+            </div>
 
-    <!-- Projet 2: Java (BIBLIOTECA) -->
-    <div class="project-card java">
-        <h3>Biblioteca (Java)</h3>
-        <p><strong>Descripció:</strong> Projecte de gestió de biblioteca desenvolupat en Java.</p>
-        <p><strong>Tecnologies:</strong> Java, Eclipse, Git</p>
-        <a href="https://github.com/sulaimanryani-do/Biblioteca-" target="_blank" style="color: #007bff; text-decoration: none; font-weight: bold;">🔗 Veure codi a GitHub</a>
-    </div>
+            <!-- Projet 2: Java (BIBLIOTECA) -->
+            <div class="project-card java">
+                <h3>Biblioteca (Java)</h3>
+                <p><strong>Descripció:</strong> Projecte de gestió de biblioteca desenvolupat en Java.</p>
+                <p><strong>Tecnologies:</strong> Java, Eclipse, Git</p>
+                <a href="https://github.com/sulaimanryani-do/Biblioteca-" target="_blank" style="color: #38bdf8; text-decoration: none; font-weight: bold;">🔗 Veure codi a GitHub</a>
+            </div>
 
-</div>
-            
-
-            <!-- Projet 2: Web -->
-            
+            <!-- Projet 3: Web (Portfolio) -->
             <div class="project-card web">
                 <h3>Site Web Personnel (Portfolio)</h3>
                 <p><strong>Descripció:</strong> Creació d'un portfolio digital personal per mostrar el currículum i projectes accessibles pel professorat.</p>
                 <p><strong>Tecnologies:</strong> HTML5, CSS3, JavaScript, GitHub Pages</p>
-                <a href="https://github.com/sulaimanryani-do/portfoly" target="_blank" style="color: #007bff; text-decoration: none; font-weight: bold;">🔗 Veure codi a GitHub</a>
+                <a href="https://github.com/sulaimanryani-do/portfoly" target="_blank" style="color: #38bdf8; text-decoration: none; font-weight: bold;">🔗 Veure codi a GitHub</a>
             </div>
-            <!-- Projecte Web: Laravel -->
-<div class="project-card web">
-    <h3>Projecte Web (Laravel & PHP)</h3>
-    <p><strong>Descripció:</strong> Aplicació web desenvolupada amb Laravel, PHP i MySQL per a la gestió de dades. (Inclou codi font per a proves locals i demo en vídeo).</p>
-    <p><strong>Tecnologies:</strong> Laravel, PHP, MySQL, HTML5, Git</p>
-    
-    <div style="margin-top: 10px;">
-        <a href="https://github.com/sulaimanryani-do/Botica-laravel-" target="_blank" style="color: #007bff; text-decoration: none; font-weight: bold; margin-right: 15px;">🔗 Codi a GitHub (Descarregar)</a>
-        <a href="https://drive.google.com/file/d/1kkPf3iwiLYr1ZB_tNr3SZ9mQxtuj6M_f/view?usp=drive_link" target="_blank" style="color: #28a745; text-decoration: none; font-weight: bold;">🎥 Veure Video Demo</a>
-    </div>
-</div>
 
-            <!-- Projecte Base de Dades: Cantina -->
-<div class="project-card sql">
-    <h3>Base de Dades Cantina (SQL)</h3>
-    <p><strong>Descripció:</strong> Disseny i implementació d'une base de dades relacional per gestionar una cantina escolar, incloent taules de clients, productes, comandes, vendes i proveïdors amb restriccions i relacions íntegres.</p>
-    <p><strong>Tecnologies:</strong> MySQL, MariaDB, SQL</p>
-    <a href="https://github.com/sulaimanryani-do/Cantina-DB" target="_blank" style="color: #007bff; text-decoration: none; font-weight: bold;">🔗 Veure codi a GitHub</a>
-</div>
+            <!-- Projet 4: Web (Laravel) -->
+            <div class="project-card web">
+                <h3>Projecte Web (Laravel & PHP)</h3>
+                <p><strong>Descripció:</strong> Aplicació web desenvolupada amb Laravel, PHP i MySQL per a la gestió de dades. (Inclou codi font per a proves locals i demo en vídeo).</p>
+                <p><strong>Tecnologies:</strong> Laravel, PHP, MySQL, HTML5, Git</p>
+                <div style="margin-top: 10px;">
+                    <a href="https://github.com/sulaimanryani-do/Botica-laravel-" target="_blank" style="color: #38bdf8; text-decoration: none; font-weight: bold; margin-right: 15px;">🔗 Codi a GitHub</a>
+                    <a href="https://drive.google.com/file/d/1kkPf3iwiLYr1ZB_tNr3SZ9mQxtuj6M_f/view?usp=drive_link" target="_blank" style="color: #38bdf8; text-decoration: none; font-weight: bold;">🎥 Veure Video Demo</a>
+                </div>
+            </div>
+
+            <!-- Projet 5: Base de Dades (Cantina) -->
+            <div class="project-card sql">
+                <h3>Base de Dades Cantina (SQL)</h3>
+                <p><strong>Descripció:</strong> Disseny i implementació d'una base de dades relacional per gestionar una cantina escolar, incloent taules de clients, productes, comandes, vendes i proveïdors amb restriccions i relacions íntegres.</p>
+                <p><strong>Tecnologies:</strong> MySQL, MariaDB, SQL</p>
+                <a href="https://github.com/sulaimanryani-do/Cantina-DB" target="_blank" style="color: #38bdf8; text-decoration: none; font-weight: bold;">🔗 Veure codi a GitHub</a>
+            </div>
 
         </div>
     </section>
@@ -112,22 +99,11 @@
     <section>
         <h2>Formacions i Certificats</h2>
         <ul>
-            <li>[Smit la formation wla l'diplôme] - [L'3am]</li>
+            <li>Desenvolupament d'Aplicacions Multiplataforma (DAM) - En curs</li>
         </ul>
     </section>
 
-    <script>
-        // Fonction dyal l'filtrage (Bach t-répondre l chrt dyal l'filtrage)
-        function filterProjects(category) {
-            const cards = document.querySelectorAll('.project-card');
-            cards.forEach(card => {
-                if (category === 'all' || card.classList.contains(category)) {
-                    card.style.display = 'block';
-                } else {
-                    card.style.display = 'none';
-                }
-            });
-        }
-    </script>
+    <!-- Enllaç al fitxer JS extern -->
+    <script src="script.js"></script>
 </body>
 </html>
