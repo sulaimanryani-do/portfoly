@@ -1,125 +1,266 @@
 <!DOCTYPE html>
-<html lang="ca">
+<html lang="ca" data-theme="clar">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>El Meu Portfolio</title>
-    <!-- Enllaç al fitxer CSS extern -->
-    <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sulaiman Ryani — Portafolis</title>
+<meta name="description" content="Portafolis de Sulaiman Ryani, estudiant de Desenvolupament d'Aplicacions Multiplataforma a Reus. Projectes, coneixements, formació i contacte.">
+<meta name="theme-color" content="#f6f8fc">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <header>
-        <h1>Sulaiman Ryani</h1>
-        <p>💻 Desenvolupador / Estudiant DAM</p>
-    </header>
+<a class="skip-link" href="#principal">Vés al contingut</a>
 
-    <!-- 1. Dades Personals -->
-    <section>
-        <h2>👤 Dades Personals</h2>
-        <p><strong>Nom:</strong> Sulaiman Ryani </p>
-        <p><strong>Correu:</strong> ryanisolaiman@gmail.com</p>
-        <p><strong>Sobre mi:</strong> Soc estudiant, m'agrada desenvolupador aplicacions i llocs web, utilitzant Java i aprenent noves tecnologies.</p>
-    </section>
+<!-- bombolles de color del fons -->
+<div class="bombolles" aria-hidden="true">
+  <span class="bombolla b1"></span>
+  <span class="bombolla b2"></span>
+  <span class="bombolla b3"></span>
+  <span class="bombolla b4"></span>
+  <span class="bombolla b5"></span>
+</div>
 
-    <!-- 2. Habilitats -->
-    <section>
-        <h2>⚡ Habilitats</h2>
-        <ul>
-            <li>☕ Java</li> 
-            <li>🗄️ SQL & PL/SQL</li>    
-            <li>🌐 HTML5 & CSS3</li>
-            <li>⚡ JavaScript</li>
-            <li>🐙 Git & GitHub</li>
-            <li>🐍 Python</li>
-        </ul>
-    </section>
+<!-- ================= NAVEGACIÓ ================= -->
+<header class="capçalera">
+  <nav class="nav" aria-label="Navegació principal">
+    <ul>
+      <li><a href="#inici" class="nav-link">Inici</a></li>
+      <li><a href="#projectes" class="nav-link">Projectes</a></li>
+      <li><a href="#coneixements" class="nav-link">Coneixements</a></li>
+      <li><a href="#formacio" class="nav-link">Formació</a></li>
+      <li><a href="#contacte" class="nav-link">Contacte</a></li>
+    </ul>
+  </nav>
+</header>
 
-    <!-- 4. Projectes -->
-    <section>
-        <h2>🚀 Projectes</h2>
-        
-        <!-- Botons de Filtratge -->
-        <div class="filter-btns">
-            <button onclick="filterProjects('all', this)" class="active">📋 Tots</button>
-            <button onclick="filterProjects('java', this)">☕ Apps (Java)</button>
-            <button onclick="filterProjects('web', this)">🌐 Web</button>
-            <button onclick="filterProjects('sql', this)">🗄️ Bases de Dades (SQL)</button>
+<button type="button" id="tema" class="tema" aria-pressed="false">
+  <span class="tema-icona" aria-hidden="true">◐</span>
+  <span class="tema-text">Fosc</span>
+</button>
+
+<main id="principal">
+
+  <!-- ================= INICI ================= -->
+  <section id="inici" class="inici">
+    <figure class="retrat" style="display: flex; align-items: center; justify-content: center; font-size: 3.5rem;">
+      💻
+    </figure>
+
+    <p class="estat"><span class="punt" aria-hidden="true"></span>Disponible per a projectes i pràctiques</p>
+
+    <h1>Sulaiman Ryani</h1>
+    <p class="rol">Estudiant de Desenvolupament d'Aplicacions Multiplataforma</p>
+
+    <p class="presentacio">
+      Soc estudiant de DAM a Reus. M'agrada desenvolupar aplicacions i llocs web,
+      utilitzant Java, PHP, SQL i aprenent noves tecnologies per crear solucions completes.
+    </p>
+
+    <ul class="dades">
+      <li><span class="dada-etiqueta">Població</span>Reus / Tarragona</li>
+      <li><span class="dada-etiqueta">Correu</span><a href="mailto:ryanisolaiman@gmail.com">ryanisolaiman@gmail.com</a></li>
+      <li><span class="dada-etiqueta">GitHub</span><a href="https://github.com/sulaimanryani-do" target="_blank" rel="noopener noreferrer">sulaimanryani-do</a></li>
+    </ul>
+
+    <p class="accions">
+      <a class="boto boto-ple" href="#projectes">Veure els projectes</a>
+      <a class="boto" href="mailto:ryanisolaiman@gmail.com">Escriu-me</a>
+    </p>
+  </section>
+
+  <!-- ================= PROJECTES ================= -->
+  <section id="projectes" class="seccio">
+    <h2>Projectes</h2>
+    <p class="seccio-intro">Filtra per tipus per trobar més ràpid el que t'interessi.</p>
+
+    <div class="filtres" role="group" aria-label="Filtrar projectes per tipus">
+      <button type="button" class="filtre" data-filter="tots" aria-pressed="true">Tots</button>
+      <button type="button" class="filtre" data-filter="escriptori" aria-pressed="false">Apps (Java)</button>
+      <button type="button" class="filtre" data-filter="web" aria-pressed="false">Web</button>
+      <button type="button" class="filtre" data-filter="dades" aria-pressed="false">Bases de dades</button>
+    </div>
+
+    <p class="comptador" id="comptador" aria-live="polite"></p>
+
+    <ul class="graella" id="llista">
+
+      <!-- Projet 1: Java (DUNGEONQUEST) -->
+      <li class="fitxa" data-category="escriptori" data-color="escriptori">
+        <div class="fitxa-dalt">
+          <span class="fitxa-tipus">Escriptori (Java)</span>
+          <span class="fitxa-any">2025</span>
         </div>
+        <h3 class="fitxa-titol">🐉 DUNGEONQUEST</h3>
+        <p class="fitxa-text">
+          Joc de rol desenvolupat en Java utilitzant Programació Orientada a Objectes (POO), amb sales de trampes, teranyines, monstres i sistemes de combat.
+        </p>
+        <ul class="tecno"><li>Java</li><li>Eclipse</li><li>Git</li></ul>
+        <p class="fitxa-enllacos">
+          <a href="https://github.com/sulaimanryani-do/DUNGEONQUEST" target="_blank" rel="noopener noreferrer">Codi a GitHub</a>
+        </p>
+      </li>
 
-        <div id="projects-container">
-            
-            <!-- Projet 1: Java (DUNGEONQUEST) - Dragon Icon -->
-            <div class="project-card java">
-                <h3>🐉 DUNGEONQUEST (Java)</h3>
-                <p><strong>Descripció:</strong> Joc de rol desenvolupat en Java utilitzant Programació Orientada a Objectes (POO), amb sales de trampes, teranyines, monstres i sistemes de combat.</p>
-                <p><strong>Tecnologies:</strong> Java (Eclipse), Git</p>
-                <a href="https://github.com/sulaimanryani-do/DUNGEONQUEST" target="_blank" style="color: #38bdf8; text-decoration: none; font-weight: bold;">🔗 Veure codi a GitHub</a>
-            </div>
-
-            <!-- Projet 2: Java (BIBLIOTECA) -->
-            <div class="project-card java">
-                <h3>📚 Biblioteca (Java)</h3>
-                <p><strong>Descripció:</strong> Projecte de gestió de biblioteca desenvolupat en Java.</p>
-                <p><strong>Tecnologies:</strong> Java, Eclipse, Git</p>
-                <a href="https://github.com/sulaimanryani-do/Biblioteca-" target="_blank" style="color: #38bdf8; text-decoration: none; font-weight: bold;">🔗 Veure codi a GitHub</a>
-            </div>
-
-            <!-- Projet 3: Web (Portfolio) -->
-            <div class="project-card web">
-                <h3>🌐 Site Web Personnel (Portfolio)</h3>
-                <p><strong>Descripció:</strong> Creació d'un portfolio digital personal per mostrar el currículum i projectes accessibles pel professorat.</p>
-                <p><strong>Tecnologies:</strong> HTML5, CSS3, JavaScript, GitHub Pages</p>
-                <a href="https://github.com/sulaimanryani-do/portfoly" target="_blank" style="color: #38bdf8; text-decoration: none; font-weight: bold;">🔗 Veure codi a GitHub</a>
-            </div>
-
-            <!-- Projet 4: Web (Laravel) -->
-            <div class="project-card web">
-                <h3>⚡ Projecte Web (Laravel & PHP)</h3>
-                <p><strong>Descripció:</strong> Aplicació web desenvolupada amb Laravel, PHP i MySQL per a la gestió de dades. (Inclou codi font per a proves locals i demo en vídeo).</p>
-                <p><strong>Tecnologies:</strong> Laravel, PHP, MySQL, HTML5, Git</p>
-                <div style="margin-top: 10px;">
-                    <a href="https://github.com/sulaimanryani-do/Botica-laravel-" target="_blank" style="color: #38bdf8; text-decoration: none; font-weight: bold; margin-right: 15px;">🔗 Codi a GitHub</a>
-                    <a href="https://drive.google.com/file/d/1kkPf3iwiLYr1ZB_tNr3SZ9mQxtuj6M_f/view?usp=drive_link" target="_blank" style="color: #38bdf8; text-decoration: none; font-weight: bold;">🎥 Veure Video Demo</a>
-                </div>
-            </div>
-
-            <!-- Projet 5: Base de Dades (Cantina) -->
-            <div class="project-card sql">
-                <h3>🗄️ Base de Dades Cantina (SQL)</h3>
-                <p><strong>Descripció:</strong> Disseny i implementació d'una base de dades relacional per gestionar una cantina escolar, incloent taules de clients, productes, comandes, vendes i proveïdors amb restriccions i relacions íntegres.</p>
-                <p><strong>Tecnologies:</strong> MySQL, MariaDB, SQL</p>
-                <a href="https://github.com/sulaimanryani-do/Cantina-DB" target="_blank" style="color: #38bdf8; text-decoration: none; font-weight: bold;">🔗 Veure codi a GitHub</a>
-            </div>
-
+      <!-- Projet 2: Java (BIBLIOTECA) -->
+      <li class="fitxa" data-category="escriptori" data-color="escriptori">
+        <div class="fitxa-dalt">
+          <span class="fitxa-tipus">Escriptori (Java)</span>
+          <span class="fitxa-any">2025</span>
         </div>
-    </section>
+        <h3 class="fitxa-titol">📚 Biblioteca</h3>
+        <p class="fitxa-text">
+          Projecte de gestió de biblioteca desenvolupat en Java orientat a objectes per controlar préstecs i llibres.
+        </p>
+        <ul class="tecno"><li>Java</li><li>Eclipse</li><li>Git</li></ul>
+        <p class="fitxa-enllacos">
+          <a href="https://github.com/sulaimanryani-do/Biblioteca-" target="_blank" rel="noopener noreferrer">Codi a GitHub</a>
+        </p>
+      </li>
 
-    <!-- 5. Formacions o Certificats -->
-    <section>
-        <h2>🎓 Formacions i Certificats</h2>
-        <ul>
-            <li>🎓 Desenvolupament d'Aplicacions Multiplataforma (DAM) - En curs</li>
-            <li>
-                🐍 <strong>Python</strong> 
-                <a href="https://drive.google.com/file/d/1TbePHAoi1LH0xFpNo8CKMFFrllOuaVMG/view?usp=drive_link" target="_blank" style="color: #38bdf8; text-decoration: none; font-weight: bold;">🔗 Veure Diploma</a>
-            </li>
-            <li>
-                ⚡ <strong>JavaScript</strong> 
-                <a href="https://drive.google.com/file/d/1miKxalTdyByCGz6gUK-tiutRZuqjmR6x/view?usp=drive_link" target="_blank" style="color: #38bdf8; text-decoration: none; font-weight: bold;">🔗 Veure Diploma</a>
-            </li>
-            <li>
-                🐧 <strong>Shell in Linux</strong> 
-                <a href="https://drive.google.com/file/d/1O87TXVp6vcbOzGAJ-b7rwUXyKzH1a6Gr/view?usp=drive_link" target="_blank" style="color: #38bdf8; text-decoration: none; font-weight: bold;">🔗 Veure Diploma</a>
-            </li>
-            <li>
-                📊 <strong>Excel para principiantes</strong> 
-                <a href="https://drive.google.com/file/d/18254opzxv0HNjOl30l5ze2fLZjtOdm4Y/view?usp=drive_link" target="_blank" style="color: #38bdf8; text-decoration: none; font-weight: bold;">🔗 Veure Diploma</a>
-            </li>
+      <!-- Projet 3: Web (Portfolio) -->
+      <li class="fitxa" data-category="web" data-color="web">
+        <div class="fitxa-dalt">
+          <span class="fitxa-tipus">Web</span>
+          <span class="fitxa-any">2026</span>
+        </div>
+        <h3 class="fitxa-titol">🌐 Site Web Personnel (Portfolio)</h3>
+        <p class="fitxa-text">
+          Creació d'un portfolio digital personal per mostrar el currículum i projectes accessibles pel professorat de manera interactiva.
+        </p>
+        <ul class="tecno"><li>HTML5</li><li>CSS3</li><li>JavaScript</li><li>GitHub Pages</li></ul>
+        <p class="fitxa-enllacos">
+          <a href="https://github.com/sulaimanryani-do/portfoly" target="_blank" rel="noopener noreferrer">Codi</a>
+        </p>
+      </li>
+
+      <!-- Projet 4: Web (Laravel) -->
+      <li class="fitxa" data-category="web" data-color="web">
+        <div class="fitxa-dalt">
+          <span class="fitxa-tipus">Web</span>
+          <span class="fitxa-any">2026</span>
+        </div>
+        <h3 class="fitxa-titol">⚡ Projecte Web (Laravel & PHP)</h3>
+        <p class="fitxa-text">
+          Aplicació web desenvolupada amb Laravel, PHP i MySQL per a la gestió de dades. Inclou codi font i demo en vídeo.
+        </p>
+        <ul class="tecno"><li>Laravel</li><li>PHP</li><li>MySQL</li><li>HTML5</li></ul>
+        <p class="fitxa-enllacos">
+          <a href="https://github.com/sulaimanryani-do/Botica-laravel-" target="_blank" rel="noopener noreferrer">Codi a GitHub</a>
+          <a href="https://drive.google.com/file/d/1kkPf3iwiLYr1ZB_tNr3SZ9mQxtuj6M_f/view?usp=drive_link" target="_blank" rel="noopener noreferrer">Video Demo</a>
+        </p>
+      </li>
+
+      <!-- Projet 5: Base de Dades (Cantina) -->
+      <li class="fitxa" data-category="dades" data-color="dades">
+        <div class="fitxa-dalt">
+          <span class="fitxa-tipus">Bases de dades</span>
+          <span class="fitxa-any">2025</span>
+        </div>
+        <h3 class="fitxa-titol">🗄️ Base de Dades Cantina (SQL)</h3>
+        <p class="fitxa-text">
+          Disseny i implementació d'una base de dades relacional per gestionar una cantina escolar, amb taules de clients, productes, comandes i relacions íntegres.
+        </p>
+        <ul class="tecno"><li>MySQL</li><li>MariaDB</li><li>SQL</li></ul>
+        <p class="fitxa-enllacos">
+          <a href="https://github.com/sulaimanryani-do/Cantina-DB" target="_blank" rel="noopener noreferrer">Codi a GitHub</a>
+        </p>
+      </li>
+
+    </ul>
+  </section>
+
+  <!-- ================= CONEIXEMENTS ================= -->
+  <section id="coneixements" class="seccio">
+    <h2>Coneixements</h2>
+    <p class="seccio-intro">Tecnologies i eines que utilitze en el meu dia a dia acadèmic.</p>
+
+    <div class="blocs">
+      <article class="bloc" data-color="dades">
+        <h3>Llenguatges</h3>
+        <ul class="tecno gran">
+          <li>Java</li><li>SQL & PL/SQL</li><li>PHP</li><li>Python</li><li>JavaScript</li>
         </ul>
-    </section>
+      </article>
 
-    <!-- Enllaç al fitxer JS extern -->
-    <script src="script.js"></script>
+      <article class="bloc" data-color="web">
+        <h3>Web</h3>
+        <ul class="tecno gran"><li>HTML5</li><li>CSS3</li><li>Laravel</li></ul>
+      </article>
+
+      <article class="bloc" data-color="escriptori">
+        <h3>Entorns i Eines</h3>
+        <ul class="tecno gran">
+          <li>Eclipse</li><li>Visual Studio Code</li><li>Git</li><li>GitHub</li>
+        </ul>
+      </article>
+    </div>
+  </section>
+
+  <!-- ================= FORMACIÓ ================= -->
+  <section id="formacio" class="seccio">
+    <h2>Formació i certificats</h2>
+
+    <h3 class="subtitol">Formació acadèmica</h3>
+    <ul class="linia">
+      <li data-color="escriptori">
+        <span class="linia-any">En curs</span>
+        <span class="linia-titol">Desenvolupament d'Aplicacions Multiplataforma (DAM)</span>
+        <span class="linia-lloc">Institut, Reus</span>
+      </li>
+    </ul>
+
+    <h3 class="subtitol">Certificats i cursos</h3>
+    <ul class="linia">
+      <li data-color="dades">
+        <span class="linia-any">Certificat</span>
+        <span class="linia-titol">🐍 Python</span>
+        <span class="linia-lloc"><a href="https://drive.google.com/file/d/1TbePHAoi1LH0xFpNo8CKMFFrllOuaVMG/view?usp=drive_link" target="_blank" rel="noopener noreferrer" style="color: var(--principal);">Veure Diploma</a></span>
+      </li>
+      <li data-color="web">
+        <span class="linia-any">Certificat</span>
+        <span class="linia-titol">⚡ JavaScript</span>
+        <span class="linia-lloc"><a href="https://drive.google.com/file/d/1miKxalTdyByCGz6gUK-tiutRZuqjmR6x/view?usp=drive_link" target="_blank" rel="noopener noreferrer" style="color: var(--principal);">Veure Diploma</a></span>
+      </li>
+      <li data-color="sistemes">
+        <span class="linia-any">Certificat</span>
+        <span class="linia-titol">🐧 Shell in Linux</span>
+        <span class="linia-lloc"><a href="https://drive.google.com/file/d/1O87TXVp6vcbOzGAJ-b7rwUXyKzH1a6Gr/view?usp=drive_link" target="_blank" rel="noopener noreferrer" style="color: var(--principal);">Veure Diploma</a></span>
+      </li>
+      <li data-color="dades">
+        <span class="linia-any">Certificat</span>
+        <span class="linia-titol">📊 Excel para principiantes</span>
+        <span class="linia-lloc"><a href="https://drive.google.com/file/d/18254opzxv0HNjOl30l5ze2fLZjtOdm4Y/view?usp=drive_link" target="_blank" rel="noopener noreferrer" style="color: var(--principal);">Veure Diploma</a></span>
+      </li>
+    </ul>
+  </section>
+
+  <!-- ================= CONTACTE ================= -->
+  <section id="contacte" class="seccio">
+    <h2>Contacte</h2>
+    <div class="contacte">
+      <p>Si vols comentar qualsevol d'aquests projectes o parlar de pràctiques, escriu-me i et responc.</p>
+      <p class="accions">
+        <a class="boto boto-ple" href="mailto:ryanisolaiman@gmail.com">ryanisolaiman@gmail.com</a>
+        <a class="boto" href="https://github.com/sulaimanryani-do" target="_blank" rel="noopener noreferrer">GitHub</a>
+      </p>
+    </div>
+  </section>
+
+  <footer class="peu">
+    <p>Sulaiman Ryani · <span id="any"></span> · Fet amb HTML, CSS i JavaScript</p>
+  </footer>
+
+</main>
+
+<button type="button" id="amunt" class="amunt" hidden>
+  <span aria-hidden="true">↑</span>
+  <span class="visually-hidden">Tornar a dalt</span>
+</button>
+
+<script src="script.js"></script>
 </body>
 </html>
