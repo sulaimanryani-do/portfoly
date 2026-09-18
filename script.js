@@ -28,33 +28,6 @@ botonsFiltre.forEach(boto => {
 
 filtrar('tots');
 
-const botoTema = document.getElementById('tema');
-const textTema = botoTema.querySelector('.tema-text');
-const icones = { clar: '◐', fosc: '◑' };
-
-function aplicarTema(tema) {
-  document.documentElement.dataset.theme = tema;
-  botoTema.setAttribute('aria-pressed', String(tema === 'fosc'));
-  botoTema.querySelector('.tema-icona').textContent = icones[tema];
-  textTema.textContent = tema === 'fosc' ? 'Clar' : 'Fosc';
-}
-
-function temaInicial() {
-  try {
-    const desat = localStorage.getItem('tema');
-    if (desat === 'clar' || desat === 'fosc') return desat;
-  } catch (error) {}
-  return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'fosc' : 'clar';
-}
-
-aplicarTema(temaInicial());
-
-botoTema.addEventListener('click', () => {
-  const nou = document.documentElement.dataset.theme === 'fosc' ? 'clar' : 'fosc';
-  aplicarTema(nou);
-  try { localStorage.setItem('tema', nou); } catch (error) {}
-});
-
 const enllacos = document.querySelectorAll('.nav-link');
 const seccions = [...enllacos]
   .map(enllac => document.querySelector(enllac.getAttribute('href')))
