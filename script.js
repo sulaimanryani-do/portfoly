@@ -1,6 +1,7 @@
 function filterProjects(category, btnElement) {
     const cards = document.querySelectorAll('.project-card');
     
+    // T-bdel l-class active l les boutons b tariqa smooth
     const buttons = document.querySelectorAll('.filter-btns button');
     buttons.forEach(btn => btn.classList.remove('active'));
     
