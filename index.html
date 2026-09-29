@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" id="html-root">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,7 +14,7 @@
 
 <a class="skip-link" href="#principal" data-i18n="skip">Skip to content</a>
 
-<!-- Language Switcher Button (Top Right) -->
+<!-- Language Switcher Button (Top Right - EN, ES, CA only) -->
 <div class="lang-switcher">
   <button onclick="changeLanguage('en')" class="lang-btn">EN</button>
   <button onclick="changeLanguage('es')" class="lang-btn">ES</button>
@@ -43,14 +43,20 @@
     <p class="rol" data-i18n="role">Multiplatform Application Development Student</p>
 
     <p class="presentacio" data-i18n="about">
-      I am a DAM student in Reus. I enjoy developing applications and websites, using Java, PHP, SQL, and learning new technologies to build complete solutions.
+      I am a DAM student at INS Baix Camp, Reus. I enjoy developing applications and websites, using Java, PHP, SQL, and learning new technologies to build complete solutions.
     </p>
 
     <ul class="dades">
       <li><span class="dada-etiqueta" data-i18n="location_label">Location</span>Reus / Tarragona</li>
       <li><span class="dada-etiqueta" data-i18n="email_label">Email</span><a href="mailto:ryanisolaiman@gmail.com">ryanisolaiman@gmail.com</a></li>
+      <li><span class="dada-etiqueta">Phone</span><a href="tel:644689138">644 689 138</a></li>
       <li><span class="dada-etiqueta">GitHub</span><a href="https://github.com/sulaimanryani-do" target="_blank" rel="noopener noreferrer">sulaimanryani-do</a></li>
     </ul>
+
+    <!-- CV Download Button -->
+    <p class="accions" style="margin-top: 1.5rem;">
+      <a class="boto boto-ple" href="LINK_DYAL_GOOGLE_DRIVE_CV" target="_blank" rel="noopener noreferrer" data-i18n="cv_btn">📄 Download CV</a>
+    </p>
   </section>
 
   <!-- ================= PROJECTES ================= -->
@@ -109,10 +115,11 @@
         </div>
         <h3 class="fitxa-titol">🌐 Personal Portfolio Website</h3>
         <p class="fitxa-text" data-i18n="proj3_desc">
-          Creation of a personal digital portfolio to showcase curriculum and projects interactively for professors.
+          Creation of a personal digital portfolio to showcase curriculum and projects interactively.
         </p>
         <ul class="tecno"><li>HTML5</li><li>CSS3</li><li>JavaScript</li><li>GitHub Pages</li></ul>
         <p class="fitxa-enllacos">
+          <a href="https://sulaimanryani-do.github.io/portfoly/" target="_blank" rel="noopener noreferrer" data-i18n="live_link">Live Demo</a>
           <a href="https://github.com/sulaimanryani-do/portfoly" target="_blank" rel="noopener noreferrer" data-i18n="code_link">Code</a>
         </p>
       </li>
@@ -156,25 +163,32 @@
   <!-- ================= CONEIXEMENTS ================= -->
   <section id="coneixements" class="seccio">
     <h2 data-i18n="skills_title">Skills</h2>
-    <p class="seccio-intro" data-i18n="skills_intro">Technologies and tools used in my daily academic work.</p>
+    <p class="seccio-intro" data-i18n="skills_intro">Technologies and tools used in my daily academic and professional work.</p>
 
     <div class="blocs">
       <article class="bloc" data-color="dades">
-        <h3 data-i18n="lang_category">Languages</h3>
+        <h3 data-i18n="lang_category">Languages & Tech</h3>
         <ul class="tecno gran">
-          <li>Java</li><li>SQL & PL/SQL</li><li>PHP</li><li>Python</li><li>JavaScript</li>
+          <li>Java</li><li>HTML5 & CSS3</li><li>PHP</li><li>MySQL</li><li>C#</li><li>Python</li>
         </ul>
       </article>
 
       <article class="bloc" data-color="web">
-        <h3 data-i18n="web_category">Web</h3>
-        <ul class="tecno gran"><li>HTML5</li><li>CSS3</li><li>Laravel</li></ul>
+        <h3 data-i18n="tools_category">Environments & Systems</h3>
+        <ul class="tecno gran">
+          <li>Eclipse</li><li>Visual Studio Code</li><li>Visual Studio 2022</li><li>LAN & Device Config</li>
+        </ul>
       </article>
 
       <article class="bloc" data-color="escriptori">
-        <h3 data-i18n="tools_category">Environments & Tools</h3>
+        <h3 data-i18n="languages_spoken">Spoken Languages</h3>
         <ul class="tecno gran">
-          <li>Eclipse</li><li>Visual Studio Code</li><li>Git</li><li>GitHub</li>
+          <li>Arabic (Native)</li>
+          <li>Spanish (B2)</li>
+          <li>German (B1)</li>
+          <li>English (B1)</li>
+          <li>French (A2)</li>
+          <li>Catalan (Basic)</li>
         </ul>
       </article>
     </div>
@@ -187,33 +201,52 @@
     <h3 class="subtitol" data-i18n="academic_subtitle">Academic Education</h3>
     <ul class="linia">
       <li data-color="escriptori">
-        <span class="linia-any" data-i18n="current_status">Ongoing</span>
-        <span class="linia-titol" data-i18n="degree_title">Multiplatform Application Development (DAM)</span>
-        <span class="linia-lloc" data-i18n="school_name">Institut, Reus</span>
+        <span class="linia-any">2025 — Present</span>
+        <span class="linia-titol">CFGS Desenvolupament d'Aplicacions Multiplataforma (DAM)</span>
+        <span class="linia-lloc">INS Baix Camp, Reus</span>
+      </li>
+      <li data-color="sistemes">
+        <span class="linia-any">2022 — 2024</span>
+        <span class="linia-titol">Batxillerat Científic (Ciències de la Vida i de la Terra)</span>
+        <span class="linia-lloc">Lycée Qualifiant Cheikh Mohamed Mecki Nacir, Tetuan</span>
       </li>
     </ul>
 
     <h3 class="subtitol" data-i18n="certs_subtitle">Certificates & Courses</h3>
     <ul class="linia">
       <li data-color="dades">
-        <span class="linia-any" data-i18n="cert_label">Certificate</span>
-        <span class="linia-titol">🐍 Python</span>
+        <span class="linia-any">2025 (10h)</span>
+        <span class="linia-titol">🐍 Python (OpenWebinars)</span>
         <span class="linia-lloc"><a href="https://drive.google.com/file/d/1TbePHAoi1LH0xFpNo8CKMFFrllOuaVMG/view?usp=drive_link" target="_blank" rel="noopener noreferrer" style="color: var(--principal);" data-i18n="view_diploma">View Diploma</a></span>
       </li>
       <li data-color="web">
-        <span class="linia-any" data-i18n="cert_label">Certificate</span>
-        <span class="linia-titol">⚡ JavaScript</span>
+        <span class="linia-any">2025 (10h)</span>
+        <span class="linia-titol">⚡ JavaScript (OpenWebinars)</span>
         <span class="linia-lloc"><a href="https://drive.google.com/file/d/1miKxalTdyByCGz6gUK-tiutRZuqjmR6x/view?usp=drive_link" target="_blank" rel="noopener noreferrer" style="color: var(--principal);" data-i18n="view_diploma">View Diploma</a></span>
       </li>
       <li data-color="sistemes">
-        <span class="linia-any" data-i18n="cert_label">Certificate</span>
-        <span class="linia-titol">🐧 Shell in Linux</span>
+        <span class="linia-any">2025 (4h)</span>
+        <span class="linia-titol">🐧 Shell en Linux (OpenWebinars)</span>
         <span class="linia-lloc"><a href="https://drive.google.com/file/d/1O87TXVp6vcbOzGAJ-b7rwUXyKzH1a6Gr/view?usp=drive_link" target="_blank" rel="noopener noreferrer" style="color: var(--principal);" data-i18n="view_diploma">View Diploma</a></span>
       </li>
       <li data-color="dades">
-        <span class="linia-any" data-i18n="cert_label">Certificate</span>
-        <span class="linia-titol">📊 Excel for Beginners</span>
+        <span class="linia-any">2025 (4h)</span>
+        <span class="linia-titol">📊 Excel (OpenWebinars)</span>
         <span class="linia-lloc"><a href="https://drive.google.com/file/d/18254opzxv0HNjOl30l5ze2fLZjtOdm4Y/view?usp=drive_link" target="_blank" rel="noopener noreferrer" style="color: var(--principal);" data-i18n="view_diploma">View Diploma</a></span>
+      </li>
+    </ul>
+
+    <h3 class="subtitol" data-i18n="exp_subtitle">Professional Experience</h3>
+    <ul class="linia">
+      <li data-color="web">
+        <span class="linia-any">2025 (6 mesos)</span>
+        <span class="linia-titol">Operari de producció de galetes</span>
+        <span class="linia-lloc">Dupon, Reus</span>
+      </li>
+      <li data-color="escriptori">
+        <span class="linia-any">2022 — 2025</span>
+        <span class="linia-titol">Venedor / Gestió comercial</span>
+        <span class="linia-lloc">Productes d'alimentació, electrònica i roba</span>
       </li>
     </ul>
   </section>
