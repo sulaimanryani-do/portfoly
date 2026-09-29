@@ -79,7 +79,7 @@ img { max-width: 100%; display: block; }
   66%      { transform: translate(-1.5rem, 2.5rem) scale(0.95); }
 }
 
-/* ================= LANGUAGE SWITCHER ================= */
+/* ================= LANGUAGE SWITCHER (EN, ES, CA) ================= */
 .lang-switcher {
   position: fixed;
   top: 1.25rem;
