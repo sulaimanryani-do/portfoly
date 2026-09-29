@@ -3,9 +3,10 @@ const translations = {
     skip: "Skip to content",
     status: "Available for projects and internships",
     role: "Multiplatform Application Development Student",
-    about: "I am a DAM student in Reus. I enjoy developing applications and websites, using Java, PHP, SQL, and learning new technologies to build complete solutions.",
+    about: "I am a DAM student at INS Baix Camp, Reus. I enjoy developing applications and websites, using Java, PHP, SQL, and learning new technologies to build complete solutions.",
     location_label: "Location",
     email_label: "Email",
+    cv_btn: "📄 Download CV",
     projects_title: "Projects",
     projects_intro: "Filter by type to quickly find what interests you.",
     filter_all: "All",
@@ -17,24 +18,23 @@ const translations = {
     proj2_type: "Desktop (Java)",
     proj2_desc: "Library management project developed in Java using object-oriented principles to control loans and books.",
     proj3_type: "Web",
-    proj3_desc: "Creation of a personal digital portfolio to showcase curriculum and projects interactively for professors.",
+    proj3_desc: "Creation of a personal digital portfolio to showcase curriculum and projects interactively.",
     proj4_type: "Web",
     proj4_desc: "Web application developed with Laravel, PHP, and MySQL for data management. Includes source code and video demo.",
     proj5_type: "Databases",
     proj5_desc: "Design and implementation of a relational database to manage a school canteen, including tables for clients, products, orders, and sales.",
     code_link: "GitHub Code",
+    live_link: "Live Demo",
     demo_link: "Video Demo",
     skills_title: "Skills",
-    skills_intro: "Technologies and tools used in my daily academic work.",
-    lang_category: "Languages",
-    web_category: "Web",
-    tools_category: "Environments & Tools",
+    skills_intro: "Technologies and tools used in my daily academic and professional work.",
+    lang_category: "Languages & Tech",
+    tools_category: "Environments & Systems",
+    languages_spoken: "Spoken Languages",
     edu_title: "Education & Certificates",
     academic_subtitle: "Academic Education",
-    current_status: "Ongoing",
-    degree_title: "Multiplatform Application Development (DAM)",
-    school_name: "Institut, Reus",
     certs_subtitle: "Certificates & Courses",
+    exp_subtitle: "Professional Experience",
     cert_label: "Certificate",
     view_diploma: "View Diploma",
     contact_title: "Contact",
@@ -49,9 +49,10 @@ const translations = {
     skip: "Ir al contenido",
     status: "Disponible para proyectos y prácticas",
     role: "Estudiante de Desarrollo de Aplicaciones Multiplataforma",
-    about: "Soy estudiante de DAM en Reus. Me gusta desarrollar aplicaciones y sitios web, utilizando Java, PHP, SQL y aprendiendo nuevas tecnologías.",
+    about: "Soy estudiante de DAM en el INS Baix Camp, Reus. Me gusta desarrollar aplicaciones y sitios web, utilizando Java, PHP, SQL y aprendiendo nuevas tecnologías.",
     location_label: "Población",
     email_label: "Correo",
+    cv_btn: "📄 Descargar CV",
     projects_title: "Proyectos",
     projects_intro: "Filtra por tipo para encontrar más rápido lo que te interese.",
     filter_all: "Todos",
@@ -63,24 +64,23 @@ const translations = {
     proj2_type: "Escritorio (Java)",
     proj2_desc: "Proyecto de gestión de biblioteca desarrollado en Java orientado a objetos para controlar préstamos y libros.",
     proj3_type: "Web",
-    proj3_desc: "Creación de un portfolio digital personal para mostrar el currículum y proyectos accesibles por el profesorado de manera interactiva.",
+    proj3_desc: "Creación de un portfolio digital personal para mostrar el currículum y proyectos de manera interactiva.",
     proj4_type: "Web",
     proj4_desc: "Aplicación web desarrollada con Laravel, PHP y MySQL para la gestión de datos. Incluye código fuente y demo en vídeo.",
     proj5_type: "Bases de datos",
-    proj5_desc: "Diseño e implementación de una base de datos relacional para gestionar una cantina escolar, con tablas de clientes, productos, pedidos y relaciones íntegres.",
+    proj5_desc: "Diseño e implementación de una base de datos relacional para gestionar una cantina escolar, con tablas de clientes, productos, pedidos y ventas.",
     code_link: "Código en GitHub",
+    live_link: "Ver Web",
     demo_link: "Ver Vídeo Demo",
     skills_title: "Conocimientos",
-    skills_intro: "Tecnologías y herramientas que utilizo en mi día a día académico.",
-    lang_category: "Lenguajes",
-    web_category: "Web",
-    tools_category: "Entornos y Herramientas",
+    skills_intro: "Tecnologías y herramientas que utilizo en mi día a día académico y profesional.",
+    lang_category: "Lenguajes y Tecnologías",
+    tools_category: "Entornos y Sistemas",
+    languages_spoken: "Idiomas",
     edu_title: "Formación y certificados",
     academic_subtitle: "Formación académica",
-    current_status: "En curso",
-    degree_title: "Desarrollo de Aplicaciones Multiplataforma (DAM)",
-    school_name: "Institut, Reus",
     certs_subtitle: "Certificados y cursos",
+    exp_subtitle: "Experiencia laboral",
     cert_label: "Certificado",
     view_diploma: "Ver Diploma",
     contact_title: "Contacto",
@@ -95,9 +95,10 @@ const translations = {
     skip: "Vés al contingut",
     status: "Disponible per a projectes i pràctiques",
     role: "Estudiant de Desenvolupament d'Aplicacions Multiplataforma",
-    about: "Soc estudiant de DAM a Reus. M'agrada desenvolupar aplicacions i llocs web, utilitzant Java, PHP, SQL i aprenent noves tecnologies.",
+    about: "Soc estudiant de DAM a l'INS Baix Camp, Reus. M'agrada desenvolupar aplicacions i llocs web, utilitzant Java, PHP, SQL i aprenent noves tecnologies.",
     location_label: "Població",
     email_label: "Correu",
+    cv_btn: "📄 Descarregar CV",
     projects_title: "Projectes",
     projects_intro: "Filtra per tipus per trobar més ràpid el que t'interessi.",
     filter_all: "Tots",
@@ -109,24 +110,23 @@ const translations = {
     proj2_type: "Escriptori (Java)",
     proj2_desc: "Projecte de gestió de biblioteca desenvolupat en Java orientat a objectes per controlar préstecs i llibres.",
     proj3_type: "Web",
-    proj3_desc: "Creació d'un portfolio digital personal per mostrar el currículum i projectes accessibles pel professorat de manera interactiva.",
+    proj3_desc: "Creació d'un portfolio digital personal per mostrar el currículum i projectes de manera interactiva.",
     proj4_type: "Web",
     proj4_desc: "Aplicació web desenvolupada amb Laravel, PHP i MySQL per a la gestió de dades. Inclou codi font i demo en vídeo.",
     proj5_type: "Bases de dades",
-    proj5_desc: "Disseny i implementació d'una base de dades relacional per gestionar una cantina escolar, amb taules de clients, productes, comandes i relacions íntegres.",
+    proj5_desc: "Disseny i implementació d'una base de dades relacional per gestionar una cantina escolar, amb taules de clients, productes, comandes i vendes.",
     code_link: "Codi a GitHub",
+    live_link: "Veure Web",
     demo_link: "Video Demo",
     skills_title: "Coneixements",
-    skills_intro: "Tecnologies i eines que utilitze en el meu dia a dia acadèmic.",
-    lang_category: "Llenguatges",
-    web_category: "Web",
-    tools_category: "Entorns i Eines",
+    skills_intro: "Tecnologies i eines que utilitze en el meu dia a dia acadèmic i professional.",
+    lang_category: "Llenguatges i Tecnologies",
+    tools_category: "Entorns i Sistemes",
+    languages_spoken: "Idiomes",
     edu_title: "Formació i certificats",
-    academic_subtitle: "Formació acadèmica",
-    current_status: "En curs",
-    degree_title: "Desenvolupament d'Aplicacions Multiplataforma (DAM)",
-    school_name: "Institut, Reus",
+    academic_subtitle: "Formación académica",
     certs_subtitle: "Certificats i cursos",
+    exp_subtitle: "Experiència laboral",
     cert_label: "Certificat",
     view_diploma: "Veure Diploma",
     contact_title: "Contacte",
@@ -144,12 +144,10 @@ let currentLang = 'en';
 function changeLanguage(lang) {
   currentLang = lang;
   
-  // Highlight active button
   document.querySelectorAll('.lang-btn').forEach(btn => {
     btn.classList.toggle('active', btn.textContent.toLowerCase() === lang);
   });
 
-  // Translate all elements with data-i18n
   document.querySelectorAll('[data-i18n]').forEach(el => {
     const key = el.getAttribute('data-i18n');
     if (translations[lang][key]) {
@@ -157,14 +155,12 @@ function changeLanguage(lang) {
     }
   });
 
-  // Re-run filter to update counter text in correct language
   const activeButton = document.querySelector('.filtre[aria-pressed="true"]');
   if (activeButton) {
     filtrar(activeButton.getAttribute('data-filter'));
   }
 }
 
-// Project filtering logic
 const botonsFiltre = document.querySelectorAll('.filtre');
 const targetes = document.querySelectorAll('#llista .fitxa');
 const comptador = document.getElementById('comptador');
@@ -194,7 +190,6 @@ botonsFiltre.forEach(boto => {
   });
 });
 
-// Initialize default language to English
 changeLanguage('en');
 
 const botoAmunt = document.getElementById('amunt');
